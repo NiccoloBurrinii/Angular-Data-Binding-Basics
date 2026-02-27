@@ -1,27 +1,31 @@
-# HelloWorld
+# Angular Data Binding Foundations
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
+Progetto introduttivo allo sviluppo frontend con **Angular**, focalizzato sulla gestione del flusso di dati tra logica TypeScript e template HTML tramite Standalone Components.
 
-## Development server
+## Descrizione
+L'esercizio esplora le meccaniche fondamentali di reattività del framework Angular. Attraverso un'interfaccia semplice, il componente gestisce lo stato di un contatore e la proprietà di attivazione di un pulsante, dimostrando come Angular sincronizzi automaticamente la vista al variare delle variabili nel codice.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Funzionamento del Sistema:
+* **Standalone Architecture**: Utilizzo della struttura moderna di Angular (v17+) che elimina i moduli a favore di componenti indipendenti e configurazione tramite `app.config.ts`.
+* **Interpolazione `{{ }}`**: Visualizzazione dinamica di stringhe e numeri (es. `title` e `numClick`) passando i dati dal file `.ts` direttamente nel template.
+* **Property Binding `[ ]`**: Controllo degli attributi HTML tramite logica TypeScript, utilizzato nel progetto per disabilitare il pulsante (`[disabled]`) una volta cliccato.
+* **Event Binding `( )`**: Gestione degli eventi utente tramite il listener `(click)`, che scatena l'esecuzione della funzione `clickButton()` nel backend del componente.
+* **State Management**: Implementazione di una logica di aggiornamento dello stato che incrementa un contatore e modifica la disponibilità degli elementi della UI in tempo reale.
 
-## Build
+## Tecnologie e Concetti
+* **Angular 17/18**: Framework frontend enterprise per la creazione di Single Page Applications (SPA).
+* **TypeScript**: Linguaggio tipizzato per la gestione della logica applicativa.
+* **Component-Based Development**: Separazione netta tra struttura (HTML), stile (CSS) e logica (TS).
+* **CSS Scoped**: Utilizzo di stili incapsulati che influenzano esclusivamente il componente corrente (es. colore rosso degli header).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Riepilogo Sintassi Utilizzata
+| Sintassi | Tipo Binding | Direzione Dati | Scopo |
+| :--- | :--- | :--- | :--- |
+| `{{ valore }}` | **Interpolation** | TS ➔ HTML | Mostrare variabili a video |
+| `[prop]="var"` | **Property** | TS ➔ HTML | Modificare attributi o proprietà HTML |
+| `(click)="fun()"` | **Event** | HTML ➔ TS | Rispondere alle azioni dell'utente |
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+*Progetto sviluppato per consolidare le basi della comunicazione tra template e controller in ambiente Angular.*
